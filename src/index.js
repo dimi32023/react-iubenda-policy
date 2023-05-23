@@ -27,7 +27,7 @@ export default class Iubenda extends PureComponent<Props> {
   }
 
   render() {
-    const { id, styling, children, type } = this.props;
+    const { id, styling, children, target = '_blank', type } = this.props;
     const styleTypes = {
       nostyle: "iubenda-nostyle no-brand iubenda-embed",
       black: "iubenda-black no-brand iubenda-embed",
@@ -44,7 +44,7 @@ export default class Iubenda extends PureComponent<Props> {
     };
 
     return (
-      <a href={makeUrl(id, type)} className={styleTypes[styling || "nostyle"]}>
+      <a href={makeUrl(id, type)} target={target} className={styleTypes[styling || "nostyle"]}>
         {children}
       </a>
     );
