@@ -6,6 +6,7 @@ type Props = {
   styling?: string,
   children?: string,
   type?: string
+  target?: string
 };
 
 export default class Iubenda extends PureComponent<Props> {
